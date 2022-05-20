@@ -1,29 +1,43 @@
 :root {
-  --night-purple: #5741D7;
-  --sunny-orange: #FD9B3D;
-  --rainy-blue: #4A79F3;
-  --gray: #72788A;
+  --night-purple: #5741d7;
+  --sunny-orange: #fd9b3d;
+  --rainy-blue: #4a79f3;
+  --gray: #72788a;
+  --white: #fafafa;
+  --red: #b91c1c;
+  --blue: #2563eb;
 
   --headline-font: 'Epilogue', sans-serif;
   --body-font: 'Nunito', sans-serif;
 
-  --gradient-day: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-  --gradient-morning: linear-gradient(180deg, rgba(250,235,71,1) 0%, rgba(212,122,24,1) 100%);
-  --gradient-evening: linear-gradient(180deg, rgba(20,4,186,1) 0%, rgba(227,179,243,1) 100%);
-  --gradient-night: linear-gradient(180deg, rgba(12,2,20,1) 0%, rgba(119,68,202,1) 100%);
+  /* --gradient-day: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+  --gradient-morning: linear-gradient(180deg, rgba(250,235,71,1) 0%, rgba(212,122,24,1) 100%); */
+  --gradient-day: linear-gradient(
+    180deg,
+    rgba(20, 4, 186, 1) 0%,
+    rgba(227, 179, 243, 1) 100%
+  );
+  --gradient-night: linear-gradient(
+    180deg,
+    rgba(12, 2, 20, 1) 0%,
+    rgba(119, 68, 202, 1) 100%
+  );
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, 
+
+html,
 body {
   font-size: 62.5%;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -38,7 +52,7 @@ code {
     monospace;
 }
 
-#root{
+#root {
   height: 100%;
   width: 100%;
 }

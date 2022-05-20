@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { RAPID_API_KEY } from '../config/config';
 
 const OPTIONS = {
@@ -11,12 +11,12 @@ const OPTIONS = {
 
 const useWeather = (location) => {
   const [weather, setWeather] = useState();
-  const [forecast, setForecast] = useState();
-
-  console.log({ location });
-
-  const q =
-    location?.ip || `${location?.city},${location?.state},${location?.country}`;
+  const q = useMemo(
+    () =>
+      location?.ip ||
+      `${location?.city},${location?.state},${location?.country}`,
+    [location]
+  );
 
   useEffect(() => {
     fetch(
@@ -25,11 +25,10 @@ const useWeather = (location) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log('🚔', data);
         setWeather(data);
       })
       .catch((err) => console.error(err));
-  }, [location]);
+  }, [q]);
 
   return { weather };
 };

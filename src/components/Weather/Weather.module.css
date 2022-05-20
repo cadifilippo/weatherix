@@ -1,0 +1,67 @@
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.image {
+  width: 260px;
+}
+
+.temp {
+  color: var(--white);
+  font-family: var(--headline-font);
+  font-size: 7rem;
+  margin-top: 25px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.info{
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.card {
+  background-color: #FFFFFF55;
+  padding: 8px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+.windIcon {
+  width: 17px;
+  height: 17px;
+}
+.label_container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.label{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  line-height: 2rem;
+}
+.minilabel{
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+.midlabel{
+  font-size: 1.5rem;
+}
