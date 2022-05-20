@@ -9,7 +9,7 @@ const Day = ({ data, i }) => {
   return (
     <section className={styles.card}>
       <h3 className={styles.day}>{DAYS[i]}</h3>
-      <img src={day?.condition?.icon} alt={day?.condition?.text} />
+      <img src={`https://${day?.condition?.icon}`} alt={day?.condition?.text} />
       <p className={styles.temp}>{day.avgtemp_c}°C</p>
       <div className={styles.range_temp}>
         <p className={styles.max_temp}>
