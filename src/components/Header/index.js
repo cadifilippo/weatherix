@@ -19,7 +19,13 @@ const Header = ({ location }) => {
   }, [timezone]);
 
   return (
-    <View city={city} country={country} flag={flag} time={time} state={state} />
+    <View
+      city={city}
+      country={country}
+      flag={flag || `https://countryflagsapi.com/png/${country.toLowerCase()}`}
+      time={time}
+      state={state}
+    />
   );
 };
 

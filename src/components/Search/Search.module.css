@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  font-family: var(--headline-font);
+  justify-content: space-between;
+  padding: 20px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  border-radius: 50px;
+  border: none;
+  filter: opacity(0.6);
+  font-size: 1.8rem;
+  height: 50px;
+  padding: 0 20px;
+  width: calc(100%);
+}
+
+.input:focus {
+  filter: opacity(1);
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 25px;
+}
+
+.search {
+  filter: opacity(0.6);
+  width: 40px;
+}
