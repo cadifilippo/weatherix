@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwheaterix=self.webpackChunkwheaterix||[]).push([[322],{322:function(e,a,c){e.exports=c.p+"static/media/200.0ddaaffeecea7ceca851.png"}}]);

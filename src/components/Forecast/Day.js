@@ -5,7 +5,7 @@ import styles from './Forecast.module.css';
 const DAYS = ['Hoy', 'Mañana', 'Pasado'];
 
 const Day = ({ data, i }) => {
-  const { date, day, astro, hour } = data;
+  const { day } = data;
   return (
     <section className={styles.card}>
       <h3 className={styles.day}>{DAYS[i]}</h3>
