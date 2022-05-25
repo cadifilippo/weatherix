@@ -1,8 +1,22 @@
 import PropTypes from 'prop-types';
+import { DateTime } from 'luxon';
 import arrow from '../../assets/icons/arrow.png';
 import styles from './Forecast.module.css';
 
-const DAYS = ['Hoy', 'Mañana', 'Pasado'];
+const TRANSLATE = {
+  Monday: 'Lunes',
+  Tuesday: 'Martes',
+  Wednesday: 'Miércoles',
+  Thursday: 'Jueves',
+  Friday: 'Viernes',
+  Saturday: 'Sábado',
+  Sunday: 'Domingo',
+};
+const DAYS = [
+  'Hoy',
+  'Mañana',
+  TRANSLATE[DateTime.local().plus({ days: 2 }).toFormat('cccc')],
+];
 
 const Day = ({ data, i }) => {
   const { day } = data;
