@@ -6,7 +6,7 @@ import { CONDITIONS_CODES } from '../../constants/conditions';
 import View from './view';
 
 const Weather = ({ weather }) => {
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState(null);
 
   useEffect(() => {
     const folder = weather?.is_day === 1 ? 'day' : 'night';
@@ -30,6 +30,10 @@ const Weather = ({ weather }) => {
     uv,
     gust_kph: gust,
   } = weather;
+
+  if (!image) {
+    return null;
+  }
 
   return (
     <View

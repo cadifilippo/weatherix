@@ -4,7 +4,9 @@ import Header from './components/Header';
 import Weather from './components/Weather';
 import useLocation from './hooks/useLocation';
 import useWeather from './hooks/useWeather';
+import loadginLottie from './assets/lotties/loading.json';
 import Layout from './view/Layout';
+import Lottie from 'react-lottie-player';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +20,24 @@ function App() {
   }, [weather]);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <Lottie
+        loop
+        animationData={loadginLottie}
+        play
+        style={{
+          alignItems: 'center',
+          background:
+            'linear-gradient(0deg,rgba(227, 179, 243, 1), rgba(20, 4, 186, 1))',
+          display: 'flex',
+          height: '100vh',
+          justifyContent: 'center',
+          margin: '0 auto',
+          paddingBottom: '20%',
+          width: '100vw',
+        }}
+      />
+    );
   }
 
   return (
@@ -26,44 +45,6 @@ function App() {
       <Layout isDay={weather?.current?.is_day === 1}>
         <Header location={location} />
         <Weather weather={weather?.current} />
-
-        {/* <pre style={{ fontSize: '2rem' }}>
-          {JSON.stringify({ city, country, flag, gmt, state }, null, 2)}
-        </pre>
-        <pre style={{ fontSize: '2rem' }}>
-          {JSON.stringify(
-            {
-              temp_c,
-              temp_f,
-              is_day,
-              condition,
-              wind_mph,
-              wind_kph,
-              wind_degree,
-              wind_dir,
-              pressure_mb,
-              pressure_in,
-              precip_mm,
-              precip_in,
-              humidity,
-              cloud,
-              feelslike_c,
-              feelslike_f,
-              vis_km,
-              vis_miles,
-              uv,
-              gust_mph,
-              gust_kph,
-            },
-            null,
-            2
-          )}
-        </pre>
-        {forecast.forecastday.map((day, idx) => (
-          <pre style={{ fontSize: '2rem' }} key={idx}>
-            {JSON.stringify(day, null, 2)}
-          </pre>
-        ))} */}
       </Layout>
       <Forecast forecast={weather?.forecast?.forecastday} />
     </>
