@@ -1,4 +1,4 @@
-import { getByAltText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Header from './';
 
 const mockLocation = {

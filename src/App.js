@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Weather from './components/Weather';
 import useLocation from './hooks/useLocation';
 import useWeather from './hooks/useWeather';
-import loadginLottie from './assets/lotties/loading.json';
+import loadingLottie from './assets/lotties/loading.json';
 import Layout from './view/Layout';
 import Lottie from 'react-lottie-player';
 
@@ -23,7 +23,7 @@ function App() {
     return (
       <Lottie
         loop
-        animationData={loadginLottie}
+        animationData={loadingLottie}
         play
         style={{
           alignItems: 'center',
